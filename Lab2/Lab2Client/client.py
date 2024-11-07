@@ -165,6 +165,7 @@ class client(clientTCP):
         except Exception as e:
             print(f"failed to fetch a certificate: {e}")
 
+    # 重写启动start函数
     def start(self):
         '''
         启动连接，并用一个新线程监听服务器状态，主线程执行发送信息

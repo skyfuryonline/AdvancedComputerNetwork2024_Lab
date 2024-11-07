@@ -118,7 +118,6 @@ class server(serverTCP):
         '''
         验证客户端证书(从CA中心领取CA公钥)
         同时需要考虑怎么预处理接收到的certificate
-
         :param client_certificate:
         :return:
         '''

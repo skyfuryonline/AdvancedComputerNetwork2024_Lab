@@ -49,10 +49,11 @@ class CA(serverUDP):
         # 用私钥对hash进行签名并对签名进行Base64编码，以便传输,返回签名和数据
         return base64.b64encode(pkcs1_15.new(self.CA_private_key).sign(hash_val))
 
-    # 生成数字证书
+    # 生成数字证书（即简单返回元组）
     def generateCertificate(self,information,public_key):
         return information,public_key
 
+    #重写UDP的监听函数
     def listen(self):
         print("-------------CA center now online-------------")
         while True:
